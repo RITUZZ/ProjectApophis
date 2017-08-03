@@ -1,4 +1,4 @@
-package BusinessTeir;
+package BusinessTier;
 
 public class dummy {
 

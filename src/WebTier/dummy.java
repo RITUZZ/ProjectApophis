@@ -1,4 +1,4 @@
-package WebTeir;
+package WebTier;
 
 public class dummy {
 
