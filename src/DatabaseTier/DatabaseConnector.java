@@ -46,15 +46,11 @@ public class DatabaseConnector {
 	public DatabaseConnector() {
 		
 		try {
-			
-//			configProps = new Properties();
-//			FileInputStream in = new FileInputStream("config.properties");
-//			configProps.load(in);
-//			in.close();
+			//loadConfigFile();
 			
 			System.out.println("CONNECTING");
-			connection = DriverManager.getConnection(new StringBuilder().append(configProps.getProperty("jdbcHost")).append(configProps.getProperty("jdbcName")).toString(), configProps.getProperty("jdbcUsername"), configProps.getProperty("jdbcPassword"));
-			//connection = DriverManager.getConnection("jdbc:mysql://192.168.99.100:3306/db_grad_cs_1917", "user-test", "user-test");
+			//connection = DriverManager.getConnection(new StringBuilder().append(configProps.getProperty("jdbcHost")).append(configProps.getProperty("jdbcName")).toString(), configProps.getProperty("jdbcUsername"), configProps.getProperty("jdbcPassword"));
+			connection = DriverManager.getConnection("jdbc:mysql://192.168.99.100:3306/db_grad_cs_1917", "test-user", "test-user");
 			System.out.println("CONNECTED");
 
 			System.out.println(checklogin("alison", "gradprog2016@07"));
