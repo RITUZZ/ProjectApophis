@@ -14,21 +14,21 @@ public class DatabaseConnector {
 	private Connection connection;
 	static Properties configProps;
 
-	public static void main(String[] args) {
-		
-		try {
-			
-			configProps = new Properties();
-			FileInputStream in = new FileInputStream("config.properties");
-			configProps.load(in);
-			in.close();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		new DatabaseConnector();
-	}
+//	public static void main(String[] args) {
+//		
+//		try {
+//			
+//			configProps = new Properties();
+//			FileInputStream in = new FileInputStream("config.properties");
+//			configProps.load(in);
+//			in.close();
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		new DatabaseConnector();
+//	}
 
 	public Properties loadConfigFile(){
 		try {
@@ -49,11 +49,12 @@ public class DatabaseConnector {
 			//loadConfigFile();
 			
 			System.out.println("CONNECTING");
+			Class.forName( "com.mysql.jdbc.Driver" );
 			//connection = DriverManager.getConnection(new StringBuilder().append(configProps.getProperty("jdbcHost")).append(configProps.getProperty("jdbcName")).toString(), configProps.getProperty("jdbcUsername"), configProps.getProperty("jdbcPassword"));
 			connection = DriverManager.getConnection("jdbc:mysql://192.168.99.100:3306/db_grad_cs_1917", "test-user", "test-user");
 			System.out.println("CONNECTED");
 
-			System.out.println(checklogin("alison", "gradprog2016@07"));
+			//System.out.println(checklogin("alison", "gradprog2016@07"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
