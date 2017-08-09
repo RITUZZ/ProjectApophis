@@ -1,0 +1,10 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+!path C:\Users\Graduate\workspace\ProjectApophis\target\classes
+|model.User|
+|username|getUsername?|
+|tt       |tt   |
+|tt"4$%       |tt   |
+|tt12       |tt   |
