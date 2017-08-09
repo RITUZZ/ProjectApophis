@@ -3,6 +3,9 @@ package model;
 public class User {
 	
 	String username, password, salt;
+
+	public User() {
+	}
 	
 	public User(String username, String password, String salt) {
 		this.username = username;
